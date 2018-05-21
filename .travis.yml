@@ -17,4 +17,5 @@ script:
   - make test build
 
 deploy:
+  provider: releases
   skip_cleanup: true
