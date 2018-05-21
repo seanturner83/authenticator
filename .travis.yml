@@ -1,5 +1,5 @@
 language: go
-go_import_path: github.com/seanturner83/authenticator
+go_import_path: github.com/heptio/authenticator
 go:
   - 1.9.x
 
