@@ -1,6 +1,6 @@
 default: build
 
-GITHUB_REPO ?= github.com/seanturner83/authenticator
+GITHUB_REPO ?= github.com/heptio/authenticator
 GORELEASER := $(shell command -v goreleaser 2> /dev/null)
 
 .PHONY: build test format
