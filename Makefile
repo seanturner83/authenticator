@@ -1,6 +1,6 @@
 default: build
 
-GITHUB_REPO ?= github.com/heptio/authenticator
+GITHUB_REPO ?= github.com/seanturner83/authenticator
 GORELEASER := $(shell command -v goreleaser 2> /dev/null)
 
 .PHONY: build test format
@@ -9,7 +9,7 @@ build:
 ifndef GORELEASER
 	$(error "goreleaser not found (`go get -u -v github.com/goreleaser/goreleaser` to fix)")
 endif
-	$(GORELEASER) --skip-publish --rm-dist --snapshot
+	$(GORELEASER) --snapshot
 
 test:
 	go test -v -cover -race $(GITHUB_REPO)/...

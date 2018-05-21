@@ -1,5 +1,5 @@
 language: go
-go_import_path: github.com/heptio/authenticator
+go_import_path: github.com/seanturner83/authenticator
 go:
   - 1.9.x
 
@@ -14,4 +14,4 @@ install:
   - sudo mv /tmp/goreleaser /usr/local/bin
 
 script:
-  - make build test
+  - make test build
