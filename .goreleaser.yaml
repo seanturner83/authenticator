@@ -56,7 +56,7 @@ archive:
 
 release:
   github:
-    owner: heptio
+    owner: seanturner83
     name: authenticator
   draft: true
   prerelease: true
