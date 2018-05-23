@@ -24,3 +24,4 @@ deploy:
   file: dist/windowsamd64/heptio-authenticator-aws.exe
   on:
     repo: seanturner83/authenticator
+    all_branches: true
