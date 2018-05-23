@@ -15,6 +15,9 @@ install:
 
 script:
   - make test build
+  - mv dist/windowsamd64/heptio-authenticator-aws.exe heptio-authenticator-aws-windows-x64.exe
+  - mv dist/linuxamd64/heptio-authenticator-aws heptio-authenticator-aws-linux-x64
+  - mv dist/darwinamd64/heptio-authenticator-aws heptio-authenticator-aws-darwin-x64
 
 deploy:
   provider: releases
@@ -22,9 +25,9 @@ deploy:
   api_key:
     secure: oS+D/347++stAEosfFt4ElsvVkdUZ7Vt/lpAssoR3wMlUFpDyyZYSQEBnA5Ml9997/UhjezhtBjcVoK41Jwuh78AVihjzk0xD7RhM5mqDhcbacT0nA6NUjPI88yhwkM0LBZSK46cBO4g2OioW5iE1SO7v//7UKtr/XGZNxCupXSBLJ8RwWpYoukHaYxsiWJGd6AnO4WhGbjxGrKBemkCMYwGrFHvRkQM/WMEZsdoZgkHuyVGMCJcbP4E7CGSyPD4pcVp2/3eNlULVqwPJYXtGC7XK8gWMzR77elYagVZz63XbaYt18M+hKhRCBr3wghkf5sSAoSPM5W+bsyFc8dTCdq9u+qRa3ep0SD0zHC9j7PT+wetoGOH4C83TxOF5wdX6zyOaxQQW/Br8rhHwE6ISHWDoxR2cLRfnokA45zWtOJSwvJpmvHsuZzM3+VKE9jhS4Ctac0cIUdCHyz8okfnnW57B/ve0jTHt0zyuLmsf/FdOHXNJhJN8kPdfuWROwj+pwc7sHS8YpejUmemjqXv9k+i8xmk0INOgTzpykXNk4XECLHHjcIcdjnesRJsIePiSYN5pmlboPbM5kVEQYoYGBY2UTewl9kWAsxGtgQwHEjcxDuTxzjVTU2PyT+RswZmekfcorED6nORS4U8oPnZwNabSwVm6pjMGgl7l9VQehM=
   file:
-  - dist/windowsamd64/heptio-authenticator-aws.exe
-  - dist/linuxamd64/heptio-authenticator-aws
-  - dist/darwinamd64/heptio-authenticator-aws
+  - heptio-authenticator-aws-windows-x64.exe
+  - heptio-authenticator-aws-linux-x64
+  - heptio-authenticator-aws-darwin-x64
   on:
     repo: seanturner83/authenticator
     all_branches: true
